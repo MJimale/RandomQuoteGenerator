@@ -1,0 +1,32 @@
+.button{
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    padding: 0 65px;
+    transform: translate3d(0, 0, 0);
+    transition: color .3s, background 0s;
+    border: 0 solid #e3e2db;
+    background: #3d9c85;
+    color: #e3e2db;
+    font-family: "proxima-nova-soft", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: .20em;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    appearance: none;
+    margin: 12px 0 0;
+    display:inline-block;
+}
+
+.quote{
+    color: #8B2323;
+    font-family: 'Yatra One', sans-serif;
+    font-size: 21px;
+    letter-spacing: .05em;
+}
+

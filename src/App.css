@@ -1,0 +1,39 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #B1BBF8;
+  height:1133px;
+}
+
+@media screen and (max-width: 800px) {
+  .App {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px; 
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.header{
+  font-family: 'Yatra One', sans-serif;
+}
+.footer {
+   position:fixed;
+   left:0px;
+   bottom:10px;
+   height:100px;
+   width:100%;
+   background:#000;
+   font-family: 'Yatra One', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 30px;
+    color:#ffffff; 
+    text-align: center;
+}
