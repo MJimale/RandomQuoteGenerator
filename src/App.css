@@ -21,6 +21,8 @@
 }
 .header{
   font-family: 'Yatra One', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
 }
 .footer {
    position:fixed;
