@@ -29,13 +29,13 @@ class QuoteDisplay extends React.Component {
         this.setState({
         quoted:randomEngQuote[0],
         authored:randomEngQuote[1],
-        displayTweet:'inline-block',
+        displayTweet:'inline-block'
       })
     }else if(this.props.language === 'Spanish'){
        this.setState({
         quoted:randomSpanishQuote[0],
         authored:randomSpanishQuote[1],
-        displayTweet:'inline-block',
+        displayTweet:'inline-block'
       })
      }/*else(this.props.language === 'Arabic'){
        this.setState({
@@ -43,9 +43,6 @@ class QuoteDisplay extends React.Component {
         authored:randomArabQuoteAuthor[1],
         displayTweet:'inline-block',
       });*/
-    
-  console.log(randomNumber)  
-  setTimeout(this.displayTwitterButton,4000);
   };
 
   tweetButton() {
@@ -56,8 +53,14 @@ class QuoteDisplay extends React.Component {
   render() {
     return (
     <div>
-      <p className="quote">{this.state.quoted}</p>
-      <p className="quote">{this.state.authored}</p>
+      <div className="pa4"  style={{display: this.props.quoteDisplay}}>
+        <blockquote className="athelas pl4 black-90 bl bw2 b--blue ">
+          <p class="f5 f4-m f3-l lh-copy mt0 ">
+            {this.state.quoted}
+          </p>
+          <cite className="f6 ttu tracked fs-normal">―{this.state.authored}</cite>
+        </blockquote>
+      </div>
       {this.props.language === "Spanish" && 
         <button className="button" onClick={(event) => { this.randomQuote(); this.props.hideHeader();}}>Clic Aquí</button>
       }

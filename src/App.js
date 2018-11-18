@@ -8,7 +8,8 @@ class App extends Component {
     super(props);
     this.state = { 
       value: 'English',
-      displayHeader:''
+      displayHeader:'',
+      displayQuote:'none'
       };
     this.handleChange = this.handleChange.bind(this);
     this.hidingHeader = this.hidingHeader.bind(this);
@@ -19,7 +20,11 @@ class App extends Component {
   }
   
   hidingHeader(){
-    this.setState({displayHeader:'none'});
+    this.setState({
+      displayHeader:'none',
+      displayQuote:''
+    });
+
   }
   /*{
             this.state.value === 'Arabic' && 
@@ -44,26 +49,34 @@ class App extends Component {
           </div>
           <br/>
           <img src={logo} className="App-logo" alt="logo" />
-          <div className='header' style={{display: this.state.displayHeader}} >
+          <div className='pa4' style={{display: this.state.displayHeader}}>
             {
               this.state.value === 'Spanish' && 
               <div>
-                <h1>Refranes Generador</h1>
-                <h3>Haga clic en el botón de abajo para generar una cita aleatoria</h3>
+                <blockquote className="athelas pl4 black-90 bl bw2 b--blue ">
+                  <p class="f5 f4-m f3-l lh-copy mt0 ">Refranes Generador</p>
+                  <cite class="f6 ttu tracked fs-normal">―Haga clic en el botón de abajo para generar una cita aleatoria</cite>
+                </blockquote>
               </div> 
             }
             {
               this.state.value === 'English' && 
               <div>
-                <h1>Random Quote Generator</h1>
-                <h3 >Click button below to generate a random quote</h3>
+                <blockquote className="athelas pl4 black-90 bl bw2 b--blue ">
+                  <p class="f5 f4-m f3-l lh-copy mt0 ">Random Quote Generator</p>
+                  <cite class="f6 ttu tracked fs-normal">―Click the button below to generate a random quote</cite>
+                </blockquote>
               </div>  
             }
           </div>
-          <QuoteDisplay language={this.state.value} hideHeader={this.hidingHeader}/>
+          <QuoteDisplay language={this.state.value}  quoteDisplay={this.state.displayQuote} hideHeader={this.hidingHeader}/>
           <footer className="footer">
            <p>By: Mustafa Jimale</p>
           </footer>
+
+
+          
+            
       </div>
     );
   }

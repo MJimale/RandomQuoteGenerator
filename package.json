@@ -2,12 +2,13 @@
   "name": "random",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://mjimale.github.io/RandomQuoteGenerator",
+  "homepage": "https://mjimale.github.io/RandomQuoteGenerator",
   "dependencies": {
     "gh-pages": "^2.0.1",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-scripts": "1.1.5",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "^2.1.1",
+    "tachyons": "^4.11.1",
     "webfontloader": "^1.6.28"
   },
   "scripts": {
@@ -16,6 +17,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"    
+    "deploy": "gh-pages -d build"
   }
 }
